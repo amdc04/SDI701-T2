@@ -86,18 +86,36 @@ body {
   border-width: medium;
 }
 
+.contact-wrap{
+  margin: 0 auto;
+  color:rgb(0, 0, 0) !important;
+ 
+}
+
+.text-wrap{
+  color: black;
+  font-family: calibrilight !important;
+  font-size: 15px !important;
+}
+
 /*===== FIXED BACKGROUND IMG =====*/
 
 .fixed-background {
-  overflow: hidden; /*-- Correction for iOS --*/
+  overflow: hidden; 
 }
-
 
 /*-- Emoji Navbar --*/
 
 
 
 /*============= FOOTER =============*/
+
+section.video{
+  background: url(https://source.unsplash.com/1600x900/?clouds,mountain);
+}
+
+
+
 
 /*============= CONTACT US =============*/
 
