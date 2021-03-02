@@ -42,9 +42,10 @@ body {
 }
 /*============= CAROUSEL =============*/
 
-#carousel{
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 1);
+.carousel-caption{
+  margin: -5%;
 }
+
 .carousel-inner {
   max-height: 38rem!important;
 }
@@ -97,6 +98,9 @@ body {
 
 
 /*============= FOOTER =============*/
+
+/*============= CONTACT US =============*/
+
 
 
 

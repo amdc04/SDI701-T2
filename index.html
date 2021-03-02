@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>HTML5 Website with Bootstrap | Responsive Website Design</title>
 	<link rel="shortcut icon" href="img/nz.ico">
 	<!-- Bootstrap 4.5 CSS -->
@@ -12,9 +13,12 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?
-	family=Montserrat:300,400,500,600,700&display=swap" 
-	rel="stylesheet">
+	family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+
+	<!-- My Javascript files -->
+	<script src="js/custom.js"></script>
 </head>
+
 <body>
 
 	<!-- Top Bar -->
@@ -31,11 +35,9 @@
 	<nav class="navbar bg-light navbar-light navbar-expand-lg">
 		<div class="container">
 
-		<a href="index.html" class="navbar-brand"><img src="img/logo.png" 
-			alt="logo" title="Logo"></a>
+			<a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="logo" title="Logo"></a>
 
-			<button class="navbar-toggler"type="button" data-toggle="collapse"
-				data-target="#navbarResponsive">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
@@ -61,7 +63,7 @@
 
 		<!-- Carousel Content -->
 		<div class="carousel-inner">
-			
+
 			<div class="carousel-item active">
 				<img src="img/carousel/dress.jpg" alt="" class="w-100">
 				<div class="carousel-caption">
@@ -69,7 +71,7 @@
 						<div class="row-justify-content-end">
 							<div class="col-50 bg-custom d-none d-lg-block py-3 px-0">
 								<h1>New Zealand</h1>
-								 <div class="border-top border-primary w-5 mx-auto my-3"></div>
+								<div class="border-top border-primary w-5 mx-auto my-3"></div>
 								<h3>Maori Culture</h3>
 								<a href="#" class="btn btn-warning btn-lg">view weweru</a>
 							</div>
@@ -85,7 +87,7 @@
 						<div class="row-justify-content-end">
 							<div class="col-50 bg-custom d-none d-lg-block py-3 px-0">
 								<h1>Hari</h1>
-								 <div class="border-top border-primary w-5 mx-auto my-3"></div>
+								<div class="border-top border-primary w-5 mx-auto my-3"></div>
 								<h3>Maori Dance</h3>
 								<a href="#" class="btn btn-warning btn-lg">Watch Video</a>
 							</div>
@@ -134,14 +136,14 @@
 	<!-- Start Fixed Background IMG -->
 
 	<!-- End Fixed Background IMG -->
- 
-	
+
+
 	<!-- Emoji Navbar Second -->
 
 
 	<!-- Modal Popup -->
 
-		
+
 	<!-- Start Two Column Section -->
 
 	<!-- End Two Column Section -->
@@ -160,6 +162,69 @@
 	<!-- Start Socket -->
 
 	<!-- End Socket -->
+	<div class="container">
+		<div class="row">
+			<!-- Video here -->
+			<div class="col-md-6">
+
+			</div>
+
+
+
+
+			<!-- Contact form here -->
+			<div class="col-md-6">
+				<form name="contactUsForm" class="form-horizontal" method="post" onsubmit="return validateForm()">
+					<fieldset>
+						<h1 class="text-center mt-5">Contact us</h1>
+
+						<!-- Name input-->
+						<div class="form-group">
+							<label class="col-md-12 control-label" for="name">Name</label>
+							<div class="col-md-12">
+								<input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+							</div>
+						</div>
+
+						<!-- Phone input-->
+						<div class="form-group row">
+							<label for="mobile-number" class="col-md-12 col-form-label">Mobile Number</label>
+							<div class="col-md-12">
+								<input class="form-control" type="tel" placeholder="1-(555)-555-5555"
+									id="mobile-number">
+							</div>
+						</div>
+
+						<!-- Email input-->
+						<div class="form-group">
+							<label class="col-md-12 control-label" for="email">Your E-mail</label>
+							<div class="col-md-12">
+								<input id="email" name="email" type="text" placeholder="Your email"
+									class="form-control">
+							</div>
+						</div>
+
+						<!-- Message body -->
+						<div class="form-group">
+							<label class="col-md-12 control-label" for="message">Your message</label>
+							<div class="col-md-12">
+								<textarea class="form-control" id="message" name="message"
+									placeholder="Please enter your message here..." rows="5"></textarea>
+							</div>
+						</div>
+
+						<!-- Form actions -->
+						<div class="form-group">
+							<div class="col-md-12 text-right">
+								<button type="submit" class="btn btn-block btn-primary btn-lg">Submit</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+
+			</div>
+		</div>
+	</div>
 
 
 
@@ -174,6 +239,9 @@
 	<!-- Font Awesome -->
 	<script src="js/all.min.js"></script>
 
+
+
 	<!-- End Script Source Files -->
 </body>
+
 </html>
