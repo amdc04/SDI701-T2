@@ -3,11 +3,21 @@ window.load = function () {
 
 
 }
-var validateForm = function () {
+
+validateForm = function () {
     // Name Input Conditions
-    let name = document.forms["contactUsForm"]["name"].value;
-    if (name == "") {
-        alert("Name must be filled out");
+    let first = document.contactUsForm.first.value;
+    if (first == "") {
+        alert("Firstname must be filled out");
+        document.contactUsForm.first.focus();
+        return false;
+    }
+
+    // Name Input Conditions
+    let last = document.forms["contactUsForm"]["last"].value;
+    if (last == "") {
+        alert("Lastname must be filled out");
+        document.contactUsForm.last.focus();
         return false;
     }
 
@@ -15,6 +25,7 @@ var validateForm = function () {
     let mobileNumber = document.forms["contactUsForm"]["mobile-number"].value;
     if (mobileNumber == "") {
         alert("Mobile Number must be filled out");
+        document.contactUsForm.mobileNumber.focus();
         return false;
     }
 
@@ -22,6 +33,7 @@ var validateForm = function () {
     let email = document.forms["contactUsForm"]["email"].value;
     if (email == "") {
         alert("Email must be filled out");
+        document.contactUsForm.email.focus();
         return false;
     }
 
@@ -29,9 +41,9 @@ var validateForm = function () {
     let message = document.forms["contactUsForm"]["message"].value;
     if (message == "") {
         alert("Message must be filled out");
+        document.contactUsForm.message.focus();
         return false;
     }
-
 
     alert("Information submitted");
     return true;
