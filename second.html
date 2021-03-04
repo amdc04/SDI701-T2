@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?
-        family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+
+
+
+
+
+
+    <!-- End Script Source Files -->
 
     <!-- My Javascript files -->
     <script src="js/custom.js"></script>
@@ -21,135 +25,347 @@
 
 </head>
 
-<body>
+<body class="second-page">
 
+    <!-- Navigation -->
+    <nav class="navbar bg-light navbar-light navbar-expand-lg">
+        <div class="container">
+
+            <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="logo" title="Logo"></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">New Zealand</a></li>
+                    <li class="nav-item"><a href="second.html" class="nav-link">Culture</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Things to do</a></li>
+                    <li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- End Navigation -->
+
+
+    <section class="banner p-5">
+        <div class="container">
+            <div class="row">
+
+                <div class="culture-text text-center">
+                    <h1>Welcome to New Zealand Culture</h1>
+
+                    <p>The New Zealand culture is open-minded and welcoming to people of all countries and cultures. As
+                        a
+                        country we value kindness, tolerance and friendship. We’re open-minded and welcoming toward all
+                        religions and uphold the right to freedom of religion, worship and belief for all. Kiwis expect
+                        everyone
+                        to be treated fairly and they enjoy feeling safe in their homes and in public places.</p>
+
+                    <p>New Zealanders are generally relaxed, positive people who love to work hard, spend time with
+                        friends
+                        and
+                        family and enjoy the beautiful country they live in. New Zealanders – or Kiwis, as they’re often
+                        known –
+                        balance time at work with time to relax and unwind. They love exploring the outdoors, playing or
+                        watching sport, engaging in art and culture, and generally making the most of life. They’re
+                        friendly
+                        and
+                        open-minded, but can sometimes seem a bit reserved and shy.</p>
+
+                    <p>There may be many things that are different to your home country here. From our public holidays
+                        to
+                        our
+                        celebrations. The more you experience here, the better you'll understand our culture!</p>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
     <div class="main-body">
-        <div class="banner mt-5">
-            <h1>Welcome to New Zealand Culture</h1>
-            <div class="culture-text">
-                <p>The New Zealand culture is open-minded and welcoming to people of all countries and cultures. As a
-                    country we value kindness, tolerance and friendship. We’re open-minded and welcoming toward all
-                    religions and uphold the right to freedom of religion, worship and belief for all. Kiwis expect
-                    everyone
-                    to be treated fairly and they enjoy feeling safe in their homes and in public places.</p>
 
-                <p>New Zealanders are generally relaxed, positive people who love to work hard, spend time with friends
-                    and
-                    family and enjoy the beautiful country they live in. New Zealanders – or Kiwis, as they’re often
-                    known –
-                    balance time at work with time to relax and unwind. They love exploring the outdoors, playing or
-                    watching sport, engaging in art and culture, and generally making the most of life. They’re friendly
-                    and
-                    open-minded, but can sometimes seem a bit reserved and shy.</p>
 
-                <p>There may be many things that are different to your home country here. From our public holidays to
-                    our
-                    celebrations. The more you experience here, the better you'll understand our culture!</p>
-            </div>
-        </div>
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="weweru-tab" data-toggle="tab" href="#weweru" role="tab"
+                    aria-controls="weweru" aria-selected="true">Weweru</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="whakairo-tab" data-toggle="tab" href="#whakairo" role="tab"
+                    aria-controls="whakairo" aria-selected="false">Whakairo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="payment-tab" data-toggle="tab" href="#payment" role="tab"
+                    aria-controls="payment" aria-selected="false">Payment Methods</a>
+            </li>
+        </ul>
 
-        <nav class="nav nav-tabs">
-            <a href="index.html" class="nav-item nav-link">
-                <i class="fa fa-envelope"></i> Home
-            </a>
-            <a href="#" class="nav-item nav-link">
-                <i class="fa fa-home"></i> Weweru
-            </a>
-            <a href="#" class="nav-item nav-link">
-                <i class="fa fa-user"></i> Whakairo
-            </a>
-            <a href="#" class="nav-item nav-link">
-                <i class="fa fa-envelope"></i> Payment
-            </a>
-        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="tab-content" id="myTabContent">
+                    <!-- Weweru -->
+                    <div class="tab-pane fade show active" id="weweru" role="tabpanel" aria-labelledby="weweru">
+                        <h1 class="m-5">Weweru (New Zealand Traditional Dress)</h1>
+                        <div class="row mt-5 mb-5">
+                            <div class="col-md-4 col-sm-12 mb-5 mb-sm-5">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/carousel/dress1.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Weweru</h5>
+                                        <p class="card-text">Traditionally, Māori made their clothes and adornments from
+                                            native
+                                            plants, and
+                                            bird and animal
+                                            skins. There was a great variety of garments, including many kinds of
+                                            cloaks.
+                                            Clothing,
+                                            adornments and even
+                                            hairstyles showed a lot about a person’s status, and fine clothes could
+                                            enhance
+                                            mana.
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Select</a>
+                                    </div>
+                                </div>
 
-        <h1>Weweru (New Zealand Traditional Dress)</h1>
+                            </div>
+                            <div class="col-md-4 col-sm-12 mb-5 mb-sm-5">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/carousel/dress3.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Weweru</h5>
+                                        <p class="card-text">Traditionally, Māori made their clothes and adornments from
+                                            native
+                                            plants, and
+                                            bird and animal
+                                            skins. There was a great variety of garments, including many kinds of
+                                            cloaks.
+                                            Clothing,
+                                            adornments and even
+                                            hairstyles showed a lot about a person’s status, and fine clothes could
+                                            enhance
+                                            mana.
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 mb-5 mb-sm-5">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/carousel/dress2.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Weweru</h5>
+                                        <p class="card-text">Traditionally, Māori made their clothes and adornments from
+                                            native
+                                            plants, and
+                                            bird and animal
+                                            skins. There was a great variety of garments, including many kinds of
+                                            cloaks.
+                                            Clothing,
+                                            adornments and even
+                                            hairstyles showed a lot about a person’s status, and fine clothes could
+                                            enhance
+                                            mana.
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="row mt-5">
-            <div class="dress-photo mt-3" href="#" style="width: 20rem;">
-                <img class="card-img-top" src="img/carousel/dress1.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Weweru</h5>
-                    <p class="card-text">Traditionally, Māori made their clothes and adornments from native plants, and
-                        bird and animal
-                        skins. There was a great variety of garments, including many kinds of cloaks. Clothing,
-                        adornments and even
-                        hairstyles showed a lot about a person’s status, and fine clothes could enhance mana.</p>
-                    <a href="#" class="btn btn-primary">Select</a>
+                    <!-- Whakairo -->
+                    <div class="tab-pane fade" id="whakairo" role="tabpanel" aria-labelledby="whakairo">
+                        <h1 class="m-5">Whakairo Traditional Wood Carving</h1>
+                        <div class="row mt-5 mb-5">
+
+                            <div class="col-md-4 col-sm-12 mb-5 mb-sm-5">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/carousel/carving.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Weweru</h5>
+                                        <p class="card-text">Māori carvings are rich in symbolism and use common
+                                            patterns,
+                                            though styles
+                                            differ between tribes.
+                                            Symbols include the tiki, which represents the human figure, and the manaia,
+                                            a
+                                            creature with a
+                                            bird-like head and serpent-like body, associated with guardianship.
+                                            Traditional patterns used in carving were often inspired by the natural
+                                            environment, including
+                                            spider webs (pungawerewere), fish scales (unaunahi) and the unfurling fronds
+                                            of
+                                            the fern (koru).
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12 mb-5 mb-sm-5">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/carousel/wood5.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Weweru</h5>
+                                        <p class="card-text">Māori carvings are rich in symbolism and use common
+                                            patterns,
+                                            though styles
+                                            differ between tribes.
+                                            Symbols include the tiki, which represents the human figure, and the manaia,
+                                            a
+                                            creature with a
+                                            bird-like head and serpent-like body, associated with guardianship.
+                                            Traditional patterns used in carving were often inspired by the natural
+                                            environment, including
+                                            spider webs (pungawerewere), fish scales (unaunahi) and the unfurling fronds
+                                            of
+                                            the fern (koru).
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-12 mb-5 mb-sm-5">
+                                <div class="card">
+                                    <img class="card-img-top" src="img/carousel/wood.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Weweru</h5>
+                                        <p class="card-text">Māori carvings are rich in symbolism and use common
+                                            patterns,
+                                            though styles
+                                            differ between tribes.
+                                            Symbols include the tiki, which represents the human figure, and the manaia,
+                                            a
+                                            creature with a
+                                            bird-like head and serpent-like body, associated with guardianship.
+                                            Traditional patterns used in carving were often inspired by the natural
+                                            environment, including
+                                            spider webs (pungawerewere), fish scales (unaunahi) and the unfurling fronds
+                                            of
+                                            the fern (koru).
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment">
+                        <h1 class="m-5">Payment Methods</h1>
+                        <div class="row mt-5 mb-5">
+                            
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Credit Card</strong>
+                                        <small>enter your card details</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">Name</label>
+                                                    <input class="form-control" id="name" type="text" placeholder="Enter your name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="ccnumber">Credit Card Number</label>
+                                                    <div class="input-group">
+                                                        <input class="form-control" type="text" placeholder="0000 0000 0000 0000" autocomplete="email">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-text">
+                                                                <i class="mdi mdi-credit-card"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="ccmonth">Month</label>
+                                                <select class="form-control" id="ccmonth">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
+                                                    <option>7</option>
+                                                    <option>8</option>
+                                                    <option>9</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="ccyear">Year</label>
+                                                <select class="form-control" id="ccyear">
+                                                    <option>2014</option>
+                                                    <option>2015</option>
+                                                    <option>2016</option>
+                                                    <option>2017</option>
+                                                    <option>2018</option>
+                                                    <option>2019</option>
+                                                    <option>2020</option>
+                                                    <option>2021</option>
+                                                    <option>2022</option>
+                                                    <option>2023</option>
+                                                    <option>2024</option>
+                                                    <option>2025</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <div class="form-group">
+                                                    <label for="cvv">CVV/CVC</label>
+                                                    <input class="form-control" id="cvv" type="text" placeholder="123">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button class="btn btn-sm btn-success float-right" type="submit">
+                                            <i class="mdi mdi-gamepad-circle"></i> Continue</button>
+                                        <button class="btn btn-sm btn-danger" type="reset">
+                                            <i class="mdi mdi-lock-reset"></i> Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="dress-photo mt-3" href="#" style="width: 22rem;">
-                <img class="card-img-top" src="img/carousel/dress3.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Weweru</h5>
-                    <p class="card-text">Traditionally, Māori made their clothes and adornments from native plants, and
-                        bird and animal
-                        skins. There was a great variety of garments, including many kinds of cloaks. Clothing,
-                        adornments and even
-                        hairstyles showed a lot about a person’s status, and fine clothes could enhance mana.</p>
-                    <a href="#" class="btn btn-primary">Select</a>
-                </div>
-            </div>
-            <div class="dress-photo mt-3" href="#" style="width: 20rem;">
-                <img class="card-img-top" src="img/carousel/dress2.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Weweru</h5>
-                    <p class="card-text">Traditionally, Māori made their clothes and adornments from native plants, and
-                        bird and animal
-                        skins. There was a great variety of garments, including many kinds of cloaks. Clothing,
-                        adornments and even
-                        hairstyles showed a lot about a person’s status, and fine clothes could enhance mana.</p>
-                    <a href="#" class="btn btn-primary">Select</a>
-                </div>
-            </div>
-        </div>
-        <h1>Whakairo Traditional Wood Carving</h1>
-        <div class="row" id="carv">
-            <div class="dress-photo mt-3" href="#" style="width: 20rem;">
-                <img class="card-img-top" src="img/carousel/carving.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Weweru</h5>
-                    <p class="card-text">Māori carvings are rich in symbolism and use common patterns, though styles
-                        differ between tribes.
-                        Symbols include the tiki, which represents the human figure, and the manaia, a creature with a
-                        bird-like head and serpent-like body, associated with guardianship.
-                        Traditional patterns used in carving were often inspired by the natural environment, including
-                        spider webs (pungawerewere), fish scales (unaunahi) and the unfurling fronds of the fern (koru).
-                    </p>
-                    <a href="#" class="btn btn-primary">Select</a>
-                </div>
-            </div>
-            <div class="dress-photo mt-3" href="#" style="width: 18rem;">
-                <img class="card-img-top" src="img/carousel/wood5.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Weweru</h5>
-                    <p class="card-text">Māori carvings are rich in symbolism and use common patterns, though styles
-                        differ between tribes.
-                        Symbols include the tiki, which represents the human figure, and the manaia, a creature with a
-                        bird-like head and serpent-like body, associated with guardianship.
-                        Traditional patterns used in carving were often inspired by the natural environment, including
-                        spider webs (pungawerewere), fish scales (unaunahi) and the unfurling fronds of the fern (koru).
-                    </p>
-                    <a href="#" class="btn btn-primary">Select</a>
-                </div>
-            </div>
-            <div class="dress-photo mt-3" href="#" style="width: 20rem;">
-                <img class="card-img-top" src="img/carousel/wood.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Weweru</h5>
-                    <p class="card-text">Māori carvings are rich in symbolism and use common patterns, though styles
-                        differ between tribes.
-                        Symbols include the tiki, which represents the human figure, and the manaia, a creature with a
-                        bird-like head and serpent-like body, associated with guardianship.
-                        Traditional patterns used in carving were often inspired by the natural environment, including
-                        spider webs (pungawerewere), fish scales (unaunahi) and the unfurling fronds of the fern (koru).
-                    </p>
-                    <a href="#" class="btn btn-primary">Select</a>
-                </div>
-            </div>
+
+
+
         </div>
     </div>
 
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap 4.5 JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="js/all.min.js"></script>
 
 </body>
 

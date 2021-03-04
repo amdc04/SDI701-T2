@@ -1,3 +1,6 @@
+/* Google Fonts - Kaushan Script / Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /*-- Body Reset --*/
 html {
   scroll-behavior: smooth;
@@ -114,9 +117,9 @@ body {
   font-size: 15px !important;
 }
 
-#main-footer{
+#main-footer {
   background: white;
-  text-align:center;
+  text-align: center;
   margin-top: .05px;
 
 }
@@ -135,25 +138,26 @@ section.video {
   background-color: tan;
 }
 
-.wood-photo{
+.wood-photo {
   margin: 0 auto;
 }
 
-.main-body{
+.main-body {
   background-color: tan;
 }
 
-.banner{
+.banner {
   text-align: center;
 }
 
 .culture-text {
   text-align: 0 auto;
 }
-.dress-photo{
+
+.dress-photo {
   margin: 0 auto;
 }
-. 
+
 /*============= CONTACT US =============*/
 
 
@@ -161,6 +165,37 @@ section.video {
 
 /*============= SOCKET =============*/
 
+/*============= SECOND PAGE =============*/
+
+.second-page .banner {
+  background-color: #d2b48c;
+  color: #000;
+}
+
+.second-page .banner h1 {
+  font-family: "Kaushan Script";
+  font-size: 5em;
+  margin: 1em auto;
+  letter-spacing: -2px;
+}
+
+.second-page .banner p {
+  text-align: left;
+}
+
+.second-page .nav-item {
+  padding: initial;
+}
+
+.tab-pane h1{
+  font-family: "Kaushan Script";
+  text-align: center;
+  color: #000;
+}
+
+.card-img-top{
+  min-height: 616px;
+}
 
 
 /*============= MEDIA QUERIES =============*/
@@ -170,5 +205,3 @@ section.video {
 
 /* Devices under 768px (md) */
 @media (max-width: 767.98px) {}
-
-
