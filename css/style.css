@@ -119,7 +119,6 @@ body {
   text-align:center;
   margin-top: .05px;
 
-
 }
 
 .fixed-background {
@@ -134,29 +133,27 @@ section.contact {
 
 section.video {
   background-color: tan;
-  
 }
 
-.dress-photo{
-  margin: 0 auto;
-}
 .wood-photo{
   margin: 0 auto;
-
 }
+
 .main-body{
   background-color: tan;
 }
+
 .banner{
   text-align: center;
 }
+
 .culture-text {
   text-align: 0 auto;
 }
-.maori-dress{
-  text-align: center;
-
+.dress-photo{
+  margin: 0 auto;
 }
+. 
 /*============= CONTACT US =============*/
 
 
@@ -175,5 +172,3 @@ section.video {
 @media (max-width: 767.98px) {}
 
 
-
-}
