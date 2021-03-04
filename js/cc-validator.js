@@ -6,6 +6,9 @@ const htmlElements = {
 	inputCVC: document.querySelector('#txtCVC'),
 	inputAgreement: document.querySelector('#agreement'),
 	buttonCheckout: document.querySelector('#btnCheckout'),
+	ccVisa: document.querySelector('#cc-visa'),
+	ccMasterCard: document.querySelector('#cc-mastercard'),
+	ccUnknown: document.querySelector('#cc-unknown'),
 };
 
 const regex = {
@@ -143,7 +146,16 @@ function validateAgreement(check) {
 }
 
 function detectCard() {
-	let number = num.replace(/[ -]+/g, '');
+	let ccValue = htmlElements.inputCreditCard.value;
+	if (regex.visaCard.test(ccValue)) {
+		htmlElements.ccVisa.classList.toggle('invisible');
+		return false;
+	}
+
+	if (regex.masterCard.test(ccValue)) {
+		htmlElements.ccMasterCard.classList.toggle('invisible');
+		return false;
+	}
 }
 
 function toggleContinuePayment() {
