@@ -1,5 +1,6 @@
 const htmlElements = {
 	inputName: document.querySelector('#name'),
+	inputAddress: document.querySelector('#address'),
 	inputEmail: document.querySelector('#email'),
 	inputCreditCard: document.querySelector('#txtCreditCard'),
 	inputExpiration: document.querySelector('#txtExpiration'),
@@ -24,6 +25,7 @@ const regex = {
 function validate() {
 	if (
 		htmlElements.inputName.value !== '' &&
+		htmlElements.inputAddress.value !== '' &&
 		htmlElements.inputEmail.value !== '' &&
 		htmlElements.inputCreditCard.value !== '' &&
 		htmlElements.inputExpiration.value !== '' &&
@@ -31,6 +33,9 @@ function validate() {
 	) {
 		// validates Name
 		fName = validateName(htmlElements.inputName.value);
+
+		// validates Address
+		fAddress = validateAddress(htmlElements.inputAddress.value);
 
 		// validates Email
 		fEmail = validateEmail(htmlElements.inputEmail.value);
@@ -53,6 +58,7 @@ function validate() {
 	} else {
 		alert('Payment Card: Please enter your valid information all marked forms');
 		htmlElements.inputName.style.boxShadow = '0 0 0 2px red';
+		htmlElements.inputAddress.style.boxShadow = '0 0 0 2px red';
 		htmlElements.inputEmail.style.boxShadow = '0 0 0 2px red';
 		htmlElements.inputCreditCard.style.boxShadow = '0 0 0 2px red';
 		htmlElements.inputExpiration.style.boxShadow = '0 0 0 2px red';
@@ -73,12 +79,23 @@ function validateName(name) {
 	}
 }
 
-function validateEmail(email) {
-	if (email) {
-		htmlElements.inputName.style.boxShadow = '0 0 0 2px green';
+function validateName(address) {
+	if (address) {
+		htmlElements.inputAddress.style.boxShadow = '0 0 0 2px green';
 		return true;
 	} else {
-		htmlElements.inputName.style.boxShadow = '0 0 0 2px red';
+		htmlElements.inputAddress.style.boxShadow = '0 0 0 2px red';
+		alert('Payment Card: Please input your address.');
+		return false;
+	}
+}
+
+function validateEmail(email) {
+	if (email) {
+		htmlElements.inputEmail.style.boxShadow = '0 0 0 2px green';
+		return true;
+	} else {
+		htmlElements.inputEmail.style.boxShadow = '0 0 0 2px red';
 		alert('Payment Card: Please input email here.');
 		return false;
 	}

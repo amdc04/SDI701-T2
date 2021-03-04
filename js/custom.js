@@ -1,7 +1,5 @@
 window.load = function () {
 
-
-
 }
 
 validateForm = function () {
@@ -45,7 +43,7 @@ validateForm = function () {
         return false;
     }
 
-    alert("Information submitted");
+    alert("Your message has been sent!");
     return true;
 
 }
