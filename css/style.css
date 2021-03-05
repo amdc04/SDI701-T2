@@ -197,6 +197,18 @@ section.video {
   min-height: 616px;
 }
 
+#payment{
+  margin: 0 40px;  
+}
+
+.radio-cc-label{
+  vertical-align: middle;
+}
+
+.ui-datepicker-calendar {
+  display: none;
+  }
+
 
 /*============= MEDIA QUERIES =============*/
 

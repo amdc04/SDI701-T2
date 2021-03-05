@@ -1,4 +1,4 @@
-const htmlElements = {
+let htmlElements = {
 	inputName: document.querySelector('#name'),
 	inputAddress: document.querySelector('#address'),
 	inputEmail: document.querySelector('#email'),
@@ -14,9 +14,10 @@ const htmlElements = {
 
 const regex = {
 	// https://stackoverflow.com/questions/9315647/regex-credit-card-number-tests
-	// acepted cards
-	visaCard: /^4[0-9]{12}(?:[0-9]{3})?$|^4[0-9]{12}(?:[0-9]{3})?$/,
-	masterCard: /^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$/,
+	// accepted cards
+	visa: /^4[0-9]{12}(?:[0-9]{3})?$|^4[0-9]{12}(?:[0-9]{3})?$/,
+	mastercard: /^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$/,
+	amex: /^3[47][0-9]{13}$/,
 
 	// All -> visa, master card, diners club, discover, jcb, american express
 	allCards: /^(?:4[0-9]{12}(?:[0-9]{3})?|(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$/,
@@ -41,7 +42,7 @@ function validate() {
 		fEmail = validateEmail(htmlElements.inputEmail.value);
 
 		// validates Card Number
-		fcardNumber = validateCardNumber(htmlElements.inputCreditCard.value);
+		fcardNumber = validateCardType(htmlElements.inputCreditCard.value);
 
 		// validates Date
 		fdate = validateDate(htmlElements.inputExpiration.value);
@@ -49,8 +50,20 @@ function validate() {
 		// validates CVC
 		fcvc = validateCVC(htmlElements.inputCVC.value);
 
-		if (fName && fEmail && fcardNumber && fdate && fcvc) {
-			alert('Payment Card: Successful Transaction. Thank you!');
+		if (fName && fAddress && fEmail && fcardNumber && fdate && fcvc) {
+			alert('Payment Card: Successful Transaction! Thank you!');
+
+			// Extract all data
+			let name = htmlElements.inputName.value;
+			let cardType = document.querySelector("input[name='cc-radio']:checked").value.toUpperCase();
+			let creditCardNo = htmlElements.inputCreditCard.value.replace(/[ -]+/g, '').replace(/\d(?=\d{4})/g, '*');
+			let email = htmlElements.inputEmail.value;
+			let address = htmlElements.inputAddress.value;
+
+			let message = `Hi ${name},\n\nThank you for purchasing our product using ${cardType} \nwith credit card no. ${creditCardNo}.\n\nWe will email your receipt on ${email} and\nsend your product on ${address}`;
+
+			alert(message);
+			window.location.href = '/index.html'; // redirect
 		} else {
 			alert('Payment Card: Failed Transaction. Please make sure you filled up all needed information.');
 			return false;
@@ -74,44 +87,41 @@ function validateName(name) {
 		return true;
 	} else {
 		htmlElements.inputName.style.boxShadow = '0 0 0 2px red';
-		alert('Payment Card: Please input your name.');
+		alert('Payment Card: Please enter your name.');
 		return false;
 	}
 }
 
-function validateName(address) {
+function validateAddress(address) {
 	if (address) {
 		htmlElements.inputAddress.style.boxShadow = '0 0 0 2px green';
 		return true;
 	} else {
 		htmlElements.inputAddress.style.boxShadow = '0 0 0 2px red';
-		alert('Payment Card: Please input your address.');
+		alert('Payment Card: Please enter your address.');
 		return false;
 	}
 }
 
 function validateEmail(email) {
-	if (email) {
+	const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if (regex.test(email)) {
 		htmlElements.inputEmail.style.boxShadow = '0 0 0 2px green';
 		return true;
 	} else {
 		htmlElements.inputEmail.style.boxShadow = '0 0 0 2px red';
-		alert('Payment Card: Please input email here.');
+		alert('Payment Card: Please enter valid email address');
 		return false;
 	}
 }
 
-function validateCardNumber(num) {
-	let number = num.replace(/[ -]+/g, '');
+function validateCardType(num) {
+	let sanitizedNumber = num.replace(/[ -]+/g, '');
+	let cardType = document.querySelector("input[name='cc-radio']:checked").value;
 
-	if (regex.visaCard.test(number) || regex.masterCard.test(number)) {
-		htmlElements.inputCreditCard.style.boxShadow = '0 0 0 2px green';
-		return true;
-	} else {
-		htmlElements.inputCreditCard.style.boxShadow = '0 0 0 2px red';
-		alert('Payment Card: Please input a valid credit card number.');
-		return false;
-	}
+	let validCard = verifyCardNumber(cardType, sanitizedNumber);
+
+	return validCard;
 }
 
 function validateDate(date) {
@@ -126,14 +136,14 @@ function validateDate(date) {
 
 		if (expirationDate < today) {
 			htmlElements.inputExpiration.style.boxShadow = '0 0 0 2px red';
-			alert('Payment Card: Please input valid expiration date.');
+			alert('Payment Card: Please enter valid expiration date.');
 			return false;
 		} else {
 			htmlElements.inputExpiration.style.boxShadow = '0 0 0 2px green';
 			return true;
 		}
 	} else {
-		alert('Payment Card: Please input valid expiration date.');
+		alert('Payment Card: Please enter valid expiration date.');
 		htmlElements.inputExpiration.style.boxShadow = '0 0 0 2px red';
 		return false;
 	}
@@ -146,7 +156,7 @@ function validateCVC(cvc) {
 		htmlElements.inputCVC.style.boxShadow = '0 0 0 2px green';
 		return true;
 	} else {
-		alert('Payment Card: Please input CVC.');
+		alert('Payment Card: Please enter CVC.');
 		htmlElements.inputCVC.style.boxShadow = '0 0 0 2px red';
 		return false;
 	}
@@ -179,3 +189,27 @@ function toggleContinuePayment() {
 	var element = htmlElements.buttonCheckout;
 	element.toggleAttribute('disabled');
 }
+
+function verifyCardNumber(cardType, sanitizedNumber) {
+	if (regex[cardType].test(sanitizedNumber)) {
+		htmlElements.inputCreditCard.style.boxShadow = '0 0 0 2px green';
+		return true;
+	} else {
+		htmlElements.inputCreditCard.style.boxShadow = '0 0 0 2px red';
+
+		alert('Payment Card: Please enter a valid ' + cardType.toUpperCase() + ' card number');
+		return false;
+	}
+}
+
+$(function () {
+	$('.date-picker').datepicker({
+		changeMonth: true,
+		changeYear: true,
+		showButtonPanel: true,
+		dateFormat: 'mm/yy',
+		onClose: function (dateText, inst) {
+			$(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+		},
+	});
+});
