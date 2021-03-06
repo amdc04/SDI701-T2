@@ -37,11 +37,9 @@
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">New Zealand</a></li>
-                    <li class="nav-item"><a href="second.html" class="nav-link">Culture</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Things to do</a></li>
-                    <li class="nav-item"><a href="second.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="second.html" class="nav-link active">Culture</a></li>
+                    <li class="nav-item"><a href="index.html#contactus" class="nav-link">Contact Us</a></li>
                 </ul>
 
             </div>
@@ -334,8 +332,7 @@
                                                 <div class="form-group">
                                                     <label for="txtCreditCard">Credit Card Number</label>
                                                     <div class="input-group">
-                                                        <input class="form-control"
-                                                            id="txtCreditCard" type="text"
+                                                        <input class="form-control" id="txtCreditCard" type="text"
                                                             placeholder="XXXX-XXXX-XXXX-XXXX">
                                                         <div class="input-group-append">
                                                             <span class="input-group-text">
@@ -363,28 +360,32 @@
                                                         placeholder="XXX">
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="radio-wrapper col-sm-12">
                                                 <!-- Radio Button -->
                                                 <div class="form-check form-check-inline">
                                                     <div class="form-group">
-                                                        <input class="radio-cc" type="radio"
-                                                            name="cc-radio" id="visaCard" value="visa" checked>
-                                                        <label class="form-check-label radio-cc-label" for="visaCard"><i class="fab fa-cc-visa fa-2x"></i></label>
+                                                        <input class="radio-cc" type="radio" name="cc-radio"
+                                                            id="visaCard" value="visa" checked>
+                                                        <label class="form-check-label radio-cc-label" for="visaCard"><i
+                                                                class="fab fa-cc-visa fa-2x"></i></label>
                                                     </div>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <div class="form-group">
-                                                        <input class="radio-cc" type="radio"
-                                                            name="cc-radio" id="masterCard" value="mastercard">
-                                                            <label class="form-check-label radio-cc-label" for="masterCard"><i class="fab fa-cc-mastercard fa-2x"></i></label>
+                                                        <input class="radio-cc" type="radio" name="cc-radio"
+                                                            id="masterCard" value="mastercard">
+                                                        <label class="form-check-label radio-cc-label"
+                                                            for="masterCard"><i
+                                                                class="fab fa-cc-mastercard fa-2x"></i></label>
                                                     </div>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <div class="form-group">
-                                                        <input class="radio-cc" type="radio"
-                                                            name="cc-radio" id="amexCard" value="amex">
-                                                            <label class="form-check-label radio-cc-label" for="amexCard"><i class="fab fa-cc-amex fa-2x"></i></label>
+                                                        <input class="radio-cc" type="radio" name="cc-radio"
+                                                            id="amexCard" value="amex">
+                                                        <label class="form-check-label radio-cc-label" for="amexCard"><i
+                                                                class="fab fa-cc-amex fa-2x"></i></label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -397,7 +398,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <div class="card-footer">
                                         <button id="btnCheckout" class="btn btn-sm btn-success float-right"
@@ -414,23 +415,24 @@
 
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                    ...
-                    </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
                 </div>
             </div>
 
@@ -452,6 +454,28 @@
     <script src="js/all.min.js"></script>
     <!-- Credit Card Validator -->
     <script src="js/cc-validator.js"></script>
+    <script>
+        $(document).ready(function () {
+            goToTab(window.location.hash)
+        });
+
+        var goToTab = function (urlHash) {
+            if (urlHash === "") {
+                return false
+            }
+
+            $urlHash = $(`${urlHash}-tab`)
+
+            // Click the tab
+            $urlHash.click();
+
+            // Go to element
+            $('html, body').animate({
+                scrollTop: $urlHash.offset().top
+            }, 1000);
+
+        }
+    </script>
 
 
 </body>
